@@ -1,0 +1,12 @@
+* {
+
+    padding: 0;
+    margin: 0;
+}
+
+#vertical_navbar {
+
+    width: 100%;
+    height: 80px;
+    background-color: aqua;
+}
