@@ -1,3 +1,14 @@
+
+function showData() {
+  console.log("entre")
+  let nombre = document.getElementById("in_nombre_usuario").value
+  let psw = document.getElementById("in_contrasena").value
+  let psw2 = document.getElementById("in_confirmar_contrasena").value
+
+  validar_nombre_usuario(nombre) ? alert("El nombre es correcto") : alert("El nombre es incorrecto")
+  confirmar_contrasena(psw, psw2) ? alert("Contraseña correcta") : alert("Contraseña incorrecta")
+}
+
 function validar_nombre_usuario(params) {
     let isValid;
     // El tamaño maximo para nuestro input

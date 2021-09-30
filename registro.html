@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" href="./estilos.css"/>
+    <link rel="stylesheet" href="css/estilos.css"/>
 </head>
 <body>
     <main id = "container">
     <h2>Mi Registro</h2>
     <form action="" id="form_registrarse">
         <input type = "text" id= "in_nombre_usuario" placeholder="Ingrese su nombre"/>
-        <input type = "password" id= "in_contrasena"placeholder ="Ingrese su contraseña"/>      
-        <input type = "password" id= "in_confirmar_contrasena" placeholder="Confirmar contraseña"/>
+        <input type = "text" id= "in_contrasena"placeholder ="Ingrese su contraseña"/>      
+        <input type = "text" id= "in_confirmar_contrasena" placeholder="Confirmar contraseña"/>
         <br>
-        <button id = "btn_registrar_usuario">Crear Usuario</button>
+    </form>
+    <button id = "btn_registrar_usuario" onclick="showData()">Crear Usuario</button>
 </body>
 </html>
-<script src="validaciones.js"></script>
+<script src="js/validaciones.js"></script>
 
