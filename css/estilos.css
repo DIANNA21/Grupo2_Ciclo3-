@@ -1,40 +1,7 @@
-* {
-    box-sizing: border-box;
-    font-family:  'Roboto', sans-serif;
-    margin: 0 0;
-    padding: 0 0;
-}
-a{
-    text-decoration: none;
-}
-h1{
-    font-size: 60px;
-    margin: 30px 0;
-}
-h2{
-    margin: 15px 0;
-}
-button, .btn{
-    border: solid #263238 1px;
-    border-radius: 5px;
-    color: #263238;
-    font-size: 25px;
-    font-weight: bolder;
-    margin: auto;
-    padding: 7px 10px;
-    text-align: center;
-    width: 60%;
-}
-button:hover, .btn:hover{
-    border-color: #407BFF;
-    color: #ECEFF1;
-    background-color: #407BFF ;
-}
-
 /* Estilos de la barra de menú */
 #nav_drawer {
     /* border: solid 1px greenyellow; */
-    background-color: #ECEFF1;
+    background-color: #e8e8e8;
     float: right;
     padding-top: 3%;
     position: sticky;
@@ -66,43 +33,24 @@ button:hover, .btn:hover{
 }
 .full-box, .full-box img{
     background-image: url(../img/i1.jpg);
-    height: 30vh;
+    height: 10vh;
     width: 100%;
 }
 #container h1 {
     font-family: 'Scheherazade New', serif;
+    font-size: 50px;
     line-height: 55px;
+    margin: 5% auto 3%;
     text-align: center;
+    width: 70%;
 }
 
 #container p{
-    font-size: 25px;
+    font-size: 21px;
     line-height: 35px;
     margin: 0 auto;
     width: 50%;
 }
-
-.description{
-    /* border: solid 1px greenyellow; */
-    margin: auto;
-    width: 90% ;
-}
-#form_registrarse {
-    width: 250px;
-    margin: 0 auto;
-}
-
-#form_registrarse input {
-    display:block;
-    margin-top: 20px;
-    font-size: 25px;
-    width: 100%;
-}
-#container h2 {
-    text-align: center;
-}
-
-
 
 
 
