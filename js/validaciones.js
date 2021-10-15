@@ -1,12 +1,45 @@
+let registros = [];
 
-function showData() {
-  console.log("entre")
+function agregarRegistro() {
   let nombre = document.getElementById("in_nombre_usuario").value
   let psw = document.getElementById("in_contrasena").value
   let psw2 = document.getElementById("in_confirmar_contrasena").value
+  let persona = { 
+    usuario : nombre,
+    contrasena : psw,
+    confirmar_contrasena: psw2
+  };
 
-  validar_nombre_usuario(nombre) ? alert("El nombre es correcto") : alert("El nombre es incorrecto")
-  confirmar_contrasena(psw, psw2) ? alert("Contraseña correcta") : alert("Contraseña incorrecta")
+  if (persona.usuario !== "") {
+    registros.push(persona);
+    // OrdenarArreglo(registros);
+  }
+  else {
+    console.log("Fallo al almacenar datos del usuario.");
+  }
+
+  //validar_nombre_usuario(nombre) ? alert("El nombre es correcto") : alert("El nombre es incorrecto")
+  //confirmar_contrasena(psw, psw2) ? alert("Contraseña correcta") : alert("Contraseña incorrecta")
+}
+
+function OrdenarArreglo(registros) {
+  registros.sort ((a , b) => {
+    if (a.usuario < b.usuario) {
+        return -1;
+    }else if (a.usuario > b.usuario) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  console.log(registros)
+}
+
+function showRegistros() {
+  for (let i = 0; i < registros.length; i++) {
+    console.log("Usuario #" + i);
+    console.log(registros[i]);
+  }
 }
 
 function validar_nombre_usuario(params) {
@@ -76,10 +109,13 @@ function confirmar_contrasena(param1, param2) {
     return isValid
 }
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_contrasena = validar_contrasena;
-module.exports.confirmar_contrasena = confirmar_contrasena;
+module.exports.registros = registros;
+module.exports.OrdenarArreglo = OrdenarArreglo;
+module.exports.agregarRegistro = agregarRegistro;
+
+
+// module.exports.validar_nombre_usuario = validar_nombre_usuario;
+// module.exports.validar_contrasena = validar_contrasena;
+// module.exports.confirmar_contrasena = confirmar_contrasena;
 
 // confirmar_contrasena("abcde123", "bcde123") ? console.log("Yes") : console.log("Nop");
-
-
