@@ -9,21 +9,21 @@ function agregarRegistro() {
     contrasena : psw,
     confirmar_contrasena: psw2
   };
+  registros.push(persona);
 
-  if (persona.usuario !== "") {
-    registros.push(persona);
-    // OrdenarArreglo(registros);
-  }
-  else {
-    console.log("Fallo al almacenar datos del usuario.");
-  }
+  // if (persona.usuario !== "") {
+  //   // OrdenarArreglo(registros);
+  // }
+  // else {
+  //   console.log("Fallo al almacenar datos del usuario.");
+  // }
 
   //validar_nombre_usuario(nombre) ? alert("El nombre es correcto") : alert("El nombre es incorrecto")
   //confirmar_contrasena(psw, psw2) ? alert("Contraseña correcta") : alert("Contraseña incorrecta")
 }
 
-function OrdenarArreglo(registros) {
-  registros.sort ((a , b) => {
+function OrdenarArreglo(arreglo) {
+  arreglo.sort ((a , b) => {
     if (a.usuario < b.usuario) {
         return -1;
     }else if (a.usuario > b.usuario) {
@@ -32,7 +32,8 @@ function OrdenarArreglo(registros) {
       return 0;
     }
   });
-  console.log(registros)
+  console.log(arreglo)
+  return arreglo;
 }
 
 function showRegistros() {
