@@ -1,0 +1,1 @@
+select * from usuarios order by id DESC limit 0, 5
